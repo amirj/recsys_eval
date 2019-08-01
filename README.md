@@ -18,11 +18,11 @@ This is the implementation of the following paper:
 
 
 ## Results
-The following plot summarizes the results of the proposed popularity-stratified sampling, By setting P threshold to maximum, evaluation of models is corresponding to the offline recommendation system’s evaluation:
+The following plot summarizes the results of popularity-stratified sampling, By setting P threshold to maximum, evaluation of models is corresponding to the offline recommendation system's evaluation:
 ![popularity stratified sampling](popularity_stratified_sampling.png)
 
 See [the paper](#) for more details.
 
 ## How to reproduce?
-Use the corresponding Jupyter notebook to reproduce the results of each dataset (MovieLens, Amazon, GoodReads) for a specific popularity threshold P:
+Use the corresponding Jupyter notebook to reproduce the results of each dataset (MovieLens, Amazon) for a specific popularity threshold P:
 * [Experiments.ipynb](https://github.com/amirj/recsys_eval/blob/master/Experiments.ipynb)
