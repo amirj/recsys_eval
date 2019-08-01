@@ -30,5 +30,5 @@ By setting P threshold to maximum, evaluation of models is corresponding to the 
 See [the paper](#) for more details.
 
 ## How to reproduce?
-Use the corresponding Jupyter notebook to reproduce the results of each dataset (MovieLens, Amazon) for a specific popularity threshold P:
-* [Experiments.ipynb](https://github.com/amirj/recsys_eval/blob/master/Experiments.ipynb)
+Use [the corresponding Jupyter notebook](https://github.com/amirj/recsys_eval/blob/master/Experiments.ipynb) to reproduce the results of each dataset (MovieLens, Amazon) for a specific popularity threshold P:
+
