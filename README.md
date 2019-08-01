@@ -18,7 +18,10 @@ This is the implementation of the following paper:
 
 
 ## Results
-The following plot summarizes the results of popularity-stratified sampling, By setting P threshold to maximum, evaluation of models is corresponding to the offline recommendation system's evaluation:
+The following table summarizes the offline evaluation of different models on two datasets (MovieLens and Amazon):
+![offline evaluation](offline_results.png)
+
+On the other hand, the following plot summarizes the results of popularity-stratified sampling, By setting P threshold to maximum, evaluation of models is corresponding to the offline recommendation system's evaluation:
 ![popularity stratified sampling](popularity_stratified_sampling.png)
 
 See [the paper](#) for more details.
