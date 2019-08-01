@@ -1,11 +1,11 @@
 # How Sensitive is Recommendation Systems' Offline Evaluation to Popularity
 
-This is the implementation of the following paper:
+This is the implementation of the following paper (submitted):
 
 ```
 @InProceedings{recsys_eval19,
   author    = {Amir H. Jadidinejad and Craig Macdonald and Iadh Ounis},
-  title     = {How Sensitive is Recommendation Systems' Offline Evaluation to Popularity},
+  title     = {How Sensitive is Recommendation Systems' Offline Evaluation to Popularity?},
   booktitle = {In Workshop on Offline Evaluation for Recommender Systems (REVEAL2019) at the 13th ACM Conference on Recommender Systems.},
   year      = {2019},
 }
