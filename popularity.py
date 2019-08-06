@@ -14,7 +14,6 @@ class PopularityModel(object):
 
         self.k = 20
         self.topk = []
-        self.flag = False
 
     def most_common(self, L, k):
         d = defaultdict(int)  # means default value is 0
@@ -59,17 +58,16 @@ class PopularityModel(object):
         predictions: np.array
             Predicted scores for all items in item_ids.
         """
-        if not self.flag:
-            user_ids, item_ids = _predict_process_ids(user_ids, item_ids,
-                                                      self.num_items,
-                                                      False)
-            outs = []
-            for item in item_ids:
-                if int(item) in self.topk:
-                    outs.append(float(1/(self.topk.index(int(item))+1)))
-                else:
-                    outs.append(0.0)
-            self.topk = np.array(outs)
-            self.flag = True
+        user_ids, item_ids = _predict_process_ids(user_ids, item_ids,
+                                                  self.num_items,
+                                                  False)
+        outs = []
+        for item in item_ids:
+            if int(item) in self.topk:
+                outs.append(float(1/(self.topk.index(int(item))+1)))
+            else:
+                outs.append(0.0)
 
-        return self.topk
+        outs = np.array(outs, dtype=np.float32)
+
+        return outs
