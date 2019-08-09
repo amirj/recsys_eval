@@ -43,4 +43,4 @@ class RandomModel(object):
                                                   self.num_items,
                                                   False)
 
-        return np.random.rand(len(item_ids))
+        return np.random.random(size=len(item_ids))
