@@ -9,29 +9,22 @@ from collections import defaultdict
 
 class PopularityModel(object):
 
-    def __init__(self,
-                 k=20):
+    def __init__(self):
 
-        self.k = 20
-        self.topk = []
+        self.freqs = None
+        self.num_items = 0
 
-    def most_common(self, L, k):
+    def freq_counter(self, L):
+
         d = defaultdict(int)  # means default value is 0
 
-        for x in L:  # go through list
-            d[x] += 1  # increment counts
+        for x in L:
+            d[x] += 1
 
-        # sort dict items by value (count) in descending order
-        sorted_items = sorted(d.items(), key=lambda i: i[1], reverse=True)
-
-        # extract the keys
-        sorted_keys = [k for k, v in sorted_items]
-
-        # take k best
-        return sorted_keys[:k]
+        return d
 
     def fit(self, interactions, verbose=False):
-        self.topk = self.most_common(interactions.item_ids, 20)
+        self.freqs = self.freq_counter(interactions.item_ids)
         self.num_items = interactions.num_items
 
     def predict(self, user_ids, item_ids=None):
@@ -62,11 +55,8 @@ class PopularityModel(object):
                                                   self.num_items,
                                                   False)
         outs = []
-        for item in item_ids:
-            if int(item) in self.topk:
-                outs.append(float(1/(self.topk.index(int(item))+1)))
-            else:
-                outs.append(0.0)
+        for iid in item_ids:
+            outs.append(self.freqs[iid])
 
         outs = np.array(outs, dtype=np.float32)
 
