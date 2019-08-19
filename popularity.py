@@ -56,8 +56,13 @@ class PopularityModel(object):
                                                   False)
         outs = []
         for iid in item_ids:
+            # map tensor to int
+            iid = iid.data.tolist()
             outs.append(self.freqs[iid])
 
         outs = np.array(outs, dtype=np.float32)
+
+        # normalize
+        outs /= sum(outs)
 
         return outs
