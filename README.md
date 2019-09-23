@@ -1,6 +1,6 @@
 # How Sensitive is Recommendation Systems' Offline Evaluation to Popularity
 
-This is the implementation of the following paper (submitted):
+This is the implementation of the following paper:
 
 ```
 @InProceedings{recsys_eval19,
@@ -27,7 +27,7 @@ By setting P threshold to maximum, evaluation of models is corresponding to the 
 <img src="offline_results.png" width="50%">
 
 
-See [the paper](#) for more details.
+See [the paper](https://drive.google.com/open?id=1AyXj2J-6mg-TzUgZU6Gq5Oo0zHCUquRl) or [our poster](reveal19_poster.pdf) for more details.
 
 ## How to reproduce?
 Use [the corresponding Jupyter notebook](https://github.com/amirj/recsys_eval/blob/master/Experiments.ipynb) to reproduce the results of each dataset (MovieLens, Amazon) for a specific popularity threshold P:
